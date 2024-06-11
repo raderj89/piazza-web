@@ -8,7 +8,17 @@
 import UIKit
 
 class RootViewController: UITabBarController {
-
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp();

@@ -14,7 +14,8 @@
 		6313CA8D2953A1D7004AB0AF /* PiazzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CA8C2953A1D7004AB0AF /* PiazzaTests.swift */; };
 		6313CA972953A1D7004AB0AF /* PiazzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CA962953A1D7004AB0AF /* PiazzaUITests.swift */; };
 		6313CA992953A1D7004AB0AF /* PiazzaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313CA982953A1D7004AB0AF /* PiazzaUITestsLaunchTests.swift */; };
-		6313CAA7295B75C8004AB0AF /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = 6313CAA6295B75C8004AB0AF /* Turbo */; };
+		63A3311F2C18ED23009A1927 /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = 63A3311E2C18ED23009A1927 /* Turbo */; };
+		63A331212C18ED2B009A1927 /* Strada in Frameworks */ = {isa = PBXBuildFile; productRef = 63A331202C18ED2B009A1927 /* Strada */; };
 		63D3FC8B295E341900377478 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC8A295E341900377478 /* Api.swift */; };
 		63D3FC8D295E34E300377478 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3FC8C295E34E300377478 /* RootViewController.swift */; };
 		63D3FC90295E37C700377478 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63D3FC92295E37C700377478 /* Localizable.strings */; };
@@ -83,7 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6313CAA7295B75C8004AB0AF /* Turbo in Frameworks */,
+				63A3311F2C18ED23009A1927 /* Turbo in Frameworks */,
+				63A331212C18ED2B009A1927 /* Strada in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,7 @@
 				6313CA8B2953A1D7004AB0AF /* PiazzaTests */,
 				6313CA952953A1D7004AB0AF /* PiazzaUITests */,
 				6313CA732953A1D5004AB0AF /* Products */,
+				63A3311D2C18ED23009A1927 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +171,13 @@
 			path = PiazzaUITests;
 			sourceTree = "<group>";
 		};
+		63A3311D2C18ED23009A1927 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,7 +196,8 @@
 			);
 			name = Piazza;
 			packageProductDependencies = (
-				6313CAA6295B75C8004AB0AF /* Turbo */,
+				63A3311E2C18ED23009A1927 /* Turbo */,
+				63A331202C18ED2B009A1927 /* Strada */,
 			);
 			productName = Piazza;
 			productReference = 6313CA722953A1D5004AB0AF /* Piazza.app */;
@@ -261,7 +272,8 @@
 			);
 			mainGroup = 6313CA692953A1D4004AB0AF;
 			packageReferences = (
-				6313CAA5295B75C8004AB0AF /* XCRemoteSwiftPackageReference "turbo-ios" */,
+				636F6B352C18EAB300A0F909 /* XCRemoteSwiftPackageReference "strada-ios" */,
+				636F6B362C18EAED00A0F909 /* XCRemoteSwiftPackageReference "turbo-ios" */,
 			);
 			productRefGroup = 6313CA732953A1D5004AB0AF /* Products */;
 			projectDirPath = "";
@@ -679,21 +691,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6313CAA5295B75C8004AB0AF /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
+		636F6B352C18EAB300A0F909 /* XCRemoteSwiftPackageReference "strada-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/strada-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = "1.0.0-beta2";
+			};
+		};
+		636F6B362C18EAED00A0F909 /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hotwired/turbo-ios";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = "7.0.0-rc.7";
+				minimumVersion = 7.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6313CAA6295B75C8004AB0AF /* Turbo */ = {
+		63A3311E2C18ED23009A1927 /* Turbo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6313CAA5295B75C8004AB0AF /* XCRemoteSwiftPackageReference "turbo-ios" */;
+			package = 636F6B362C18EAED00A0F909 /* XCRemoteSwiftPackageReference "turbo-ios" */;
 			productName = Turbo;
+		};
+		63A331202C18ED2B009A1927 /* Strada */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 636F6B352C18EAB300A0F909 /* XCRemoteSwiftPackageReference "strada-ios" */;
+			productName = Strada;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
