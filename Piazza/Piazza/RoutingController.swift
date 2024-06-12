@@ -28,7 +28,6 @@ class RoutingController: BaseNavigationController, PathDirectable, WebBridgeMess
         let configuration = WKWebViewConfiguration()
         configuration.applicationNameForUserAgent = "Piazza Turbo Native iOS"
         configuration.processPool = sharedProcessPool
-        
         let session = Session(webViewConfiguration: configuration)
         session.pathConfiguration = Global.pathConfiguration
         

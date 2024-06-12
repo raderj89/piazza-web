@@ -7,78 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15FEF782-1B0D-433E-BD01-4AF56D778D9E"
-            shouldBeEnabled = "Yes"
+            uuid = "A647A2CA-4FA3-4A68-8BF9-B75EAFDD2E71"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Piazza/WebBridgeMessageHandler.swift"
+            filePath = "Piazza/WebBarButtonItem.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "render(_:)"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "init?(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FE9434EA-0CC1-41D5-AABC-6AAEE5BD2C29"
-            shouldBeEnabled = "Yes"
+            uuid = "AB6C8ADB-C23C-4DE0-B422-2842DA6B080A"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Piazza/WebBridgeMessageHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "render(_:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "userContentController(_:didReceive:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FE9434EA-0CC1-41D5-AABC-6AAEE5BD2C29 - 9e0053e1cf278971"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Piazza.WebBridgeMessageHandler&lt; where &#x3c4;_0_0: Piazza.RoutingController&gt;.render(Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
-                  moduleName = "Piazza"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaredrader/projects/piazza-web/Piazza/Piazza/WebBridgeMessageHandler.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20">
-               </Location>
-               <Location
-                  uuid = "FE9434EA-0CC1-41D5-AABC-6AAEE5BD2C29 - 9e0053e1cf278971"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Piazza.WebBridgeMessageHandler&lt; where &#x3c4;_0_0: Piazza.RoutingController&gt;.render(Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
-                  moduleName = "Piazza"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jaredrader/projects/piazza-web/Piazza/Piazza/WebBridgeMessageHandler.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6BF33693-DF81-4DCF-8085-9DE5D09D7B68"
-            shouldBeEnabled = "Yes"
+            uuid = "2B218D7D-028F-468C-A3EE-364C64356B27"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Piazza/WebBridgeMessageHandler.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "processBridgeMessage(_:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "userContentController(_:didReceive:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "966BAE8F-5CCE-49B2-81EE-EE07857B1F7E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Piazza/WebBridgeMessage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "init?(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6DBF290-9A62-4D40-B637-07A57F37697D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Piazza/RoutingController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "sessionDidLoadWebView(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

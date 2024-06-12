@@ -5,6 +5,8 @@ class WebBarButtonItem: UIBarButtonItem {
     let id: String
     
     init?(_ data: [String: String]) {
+        print("Initializing WebBarButtonItem with data: \(data)")
+
         if let id = data["id"] {
             self.id = id
         } else {

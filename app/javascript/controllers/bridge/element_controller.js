@@ -10,7 +10,6 @@ export default class extends Controller {
 
   render() {
     let bridgeElement = new BridgeElement(this.element);
-    console.log(bridgeElement.toMessage());
     window.webBridge.send(bridgeElement.toMessage());
   }
 }

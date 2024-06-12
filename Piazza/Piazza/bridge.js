@@ -1,5 +1,5 @@
  (() => {
-     class Adapater {
+     class Adapter {
          receive(message) {
              window.webkit.messageHandlers.nativeApp.postMessage(message)
          }

@@ -16,6 +16,7 @@ extension WebBridgeMessageHandler where Self: RoutingController {
     }
     
     private func render(_ data: [String: String]) {
+        print("Rendering with data: \(data)")
         if data["component"] == "bar_button",
            let barButtonItem = WebBarButtonItem(data) {
             var barButtonItems = currentWebBarButtonItems
@@ -38,6 +39,8 @@ extension WebBridgeMessageHandler where Self: RoutingController {
 
 extension RoutingController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("Received message: \(message.body)")
+
         if let bridgeMessage = WebBridgeMessage(message.body) {
             processBridgeMessage(bridgeMessage)
         } else {
