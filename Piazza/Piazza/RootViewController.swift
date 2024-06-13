@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Turbo
 
 class RootViewController: UITabBarController {
     init() {
@@ -51,13 +52,14 @@ extension RootViewController {
         Tab(url: Api.Path.profile, icon: "person.fill", titleKey: "tab.profile")
     ]
     
+
+    static func tabIndexForURL(_ url: URL) -> Int? {
+        return tabs.firstIndex { $0.url == url }
+    }
+    
     struct Tab {
         let url: URL
         let icon: String
         let titleKey: String
-    }
-    
-    static func tabIndexForURL(_ url: URL) -> Int? {
-        return tabs.firstIndex { $0.url == url }
     }
 }

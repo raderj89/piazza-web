@@ -7,10 +7,11 @@
 
 import UIKit
 import Turbo
+import Strada
 import SafariServices
 import WebKit
 
-class RoutingController: BaseNavigationController, PathDirectable, WebBridgeMessageHandler {
+class RoutingController: BaseNavigationController, PathDirectable {
     private enum PresentationType: String {
         case advance, replace, modal
     }
@@ -20,16 +21,18 @@ class RoutingController: BaseNavigationController, PathDirectable, WebBridgeMess
     private(set) lazy var session: Session = {
         let session = Self.createSession()
         session.delegate = self
-        session.webView.configuration.userContentController.add(self, name: "nativeApp")
         return session
     }()
     
     private static func createSession() -> Session {
+        let stradaSubstring = Strada.userAgentSubstring(for: BridgeComponent.allTypes)
+        let userAgent = "Piazza Turbo Native iOS \(stradaSubstring)"
         let configuration = WKWebViewConfiguration()
-        configuration.applicationNameForUserAgent = "Piazza Turbo Native iOS"
+        configuration.applicationNameForUserAgent = userAgent
         configuration.processPool = sharedProcessPool
         let session = Session(webViewConfiguration: configuration)
         session.pathConfiguration = Global.pathConfiguration
+        Bridge.initialize(session.webView)
         
         return session
     }
@@ -70,10 +73,6 @@ extension RoutingController: SessionDelegate {
         }
     }
     
-    func sessionDidLoadWebView(_ session: Session) {
-        session.webView.attachWebBridge()
-    }
-    
     func session(_ session: Session, didFailRequestForVisitable visitable: Visitable, error: Error) {
         if let turboError = error as? TurboError, turboError == .http(statusCode: 401) {
             showLoginScreen()
@@ -90,12 +89,6 @@ extension RoutingController: SessionDelegate {
             ))
             presentedViewController?.dismiss(animated: true)
             present(alert, animated: true)
-        }
-    }
-    
-    func sessionDidFinishRequest(_ session: Session) {
-        if session == self.session {
-            clearWebBarButtonItems()
         }
     }
     

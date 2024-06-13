@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import Bridge__ElementController from "./bridge/element_controller"
-application.register("bridge--element", Bridge__ElementController)
-
 import Bridge__NavMenuController from "./bridge/nav_menu_controller"
 application.register("bridge--nav-menu", Bridge__NavMenuController)
 
